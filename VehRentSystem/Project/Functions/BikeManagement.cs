@@ -1,4 +1,4 @@
-﻿using Project.Repository;
+﻿using Project.SQLQueries;
 using Project.VehicleData;
 using System;
 using System.Collections.Generic;
@@ -242,7 +242,7 @@ namespace Project.Functions
         {
             List<Bicycle> bikes = SqlQueries.SelectBikesWithClient();
             var result = bikes.Select(b => b).Where(b => b.BikeID == bikeID);
-            foreach (var bike in bikes)
+            foreach (var bike in result)
             {
                 // Skaiciavimas kiek dienu buvo isnuomotas dviratis
                 DateTime rentDay = Convert.ToDateTime(bike.RentFromDate);

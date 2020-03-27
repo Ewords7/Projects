@@ -1,4 +1,4 @@
-﻿using Project.Repository;
+﻿using Project.SQLQueries;
 using Project.VehicleData;
 using System;
 using System.Collections.Generic;
@@ -214,7 +214,7 @@ namespace Project.Functions
 
             var result = cars.Select(c => c).Where(c => c.VehNumber == vehNumber);
 
-            foreach (var car in cars)
+            foreach (var car in result)
             {
                 // Skaciavimas kiek dienu buvo isnuomotas automobilis
                 DateTime rentDay = Convert.ToDateTime(car.RentFromDate);

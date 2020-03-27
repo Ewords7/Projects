@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\edgar\\source\\studijos\\Project\\Project\\Project.csproj": {}
+    "C:\\Users\\edgar\\source\\studijos\\VehRentSystem\\Project\\Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\edgar\\source\\studijos\\Project\\Project\\Project.csproj": {
+    "C:\\Users\\edgar\\source\\studijos\\VehRentSystem\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\edgar\\source\\studijos\\Project\\Project\\Project.csproj",
+        "projectUniqueName": "C:\\Users\\edgar\\source\\studijos\\VehRentSystem\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "C:\\Users\\edgar\\source\\studijos\\Project\\Project\\Project.csproj",
+        "projectPath": "C:\\Users\\edgar\\source\\studijos\\VehRentSystem\\Project\\Project.csproj",
         "packagesPath": "C:\\Users\\edgar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\edgar\\source\\studijos\\Project\\Project\\obj\\",
+        "outputPath": "C:\\Users\\edgar\\source\\studijos\\VehRentSystem\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

@@ -1,4 +1,4 @@
-﻿using Project.Repository;
+﻿using Project.SQLQueries;
 using Project.VehicleData;
 using System;
 using System.Collections.Generic;
@@ -188,24 +188,24 @@ namespace Project.Functions
 
                 // Automobilio gavimas
                 var result2 = cars.Select(c => c).Where(c => c.ClientNumber == personalNumber).OrderBy(c => c.Brand).ThenBy(c => c.Model);
-                foreach (var item in result2)
+                foreach (var car in result2)
                 {
                     // Skaiciavimas kiek dienu isnuomotas automobilis
-                    DateTime rentDay = Convert.ToDateTime(item.RentFromDate);
+                    DateTime rentDay = Convert.ToDateTime(car.RentFromDate);
                     double daysRented = (todaysDate - rentDay).TotalDays;
 
                     if (daysRented == 0)
                     {
                         // Nuomos kaina, jei automobilis isnuomotas siandien
-                        rentPriceForCar += item.RentPrice;
+                        rentPriceForCar += car.RentPrice;
                     }
                     else
                     {
                         // Nuomos kaina, jei automobilis isnuomotas seniau nei siandien
-                        rentPriceForCar += item.RentPrice * daysRented;
+                        rentPriceForCar += car.RentPrice * daysRented;
                     }
 
-                    Console.WriteLine($"{item.VehNumber} {item.Brand} {item.Model}");
+                    Console.WriteLine($"{car.VehNumber} {car.Brand} {car.Model}");
                 }
 
                 Console.WriteLine("\nMotociklai\n");
@@ -213,24 +213,24 @@ namespace Project.Functions
                 // Motociklo gavimas
                 var result3 = motos.Select(m => m).Where(m => m.ClientNumber == personalNumber).OrderBy(m => m.Brand).ThenBy(m => m.Model);
 
-                foreach (var item in result3)
+                foreach (var moto in result3)
                 {
                     // Skaiciavimas kiek dienu isnuomotas motociklas
-                    DateTime rentDay = Convert.ToDateTime(item.RentFromDate);
+                    DateTime rentDay = Convert.ToDateTime(moto.RentFromDate);
                     double daysRented = (todaysDate - rentDay).TotalDays;
 
                     if (daysRented == 0)
                     {
                         // Nuomos kaina, jei motociklas isnuomotas siandien
-                        rentPriceForMoto += item.RentPrice;
+                        rentPriceForMoto += moto.RentPrice;
                     }
                     else
                     {
                         // Nuomos kaina, jei motociklas isnuomotas seniau nei siandien
-                        rentPriceForMoto += item.RentPrice * daysRented;
+                        rentPriceForMoto += moto.RentPrice * daysRented;
                     }
 
-                    Console.WriteLine($"{item.VehNumber} | {item.Brand} | {item.Model}");
+                    Console.WriteLine($"{moto.VehNumber} | {moto.Brand} | {moto.Model}");
                 }
 
                 Console.WriteLine("\nDviraciai\n");
@@ -238,24 +238,24 @@ namespace Project.Functions
                 // Dviracio gavimas
                 var result4 = bikes.Select(b => b).Where(b => b.ClientNumber == personalNumber).OrderBy(b => b.Brand).ThenBy(b => b.Model);
 
-                foreach (var item in result4)
+                foreach (var bike in result4)
                 {
                     // Skaiciavimas kiek dienu isnuomotas dviratis
-                    DateTime rentDay = Convert.ToDateTime(item.RentFromDate);
+                    DateTime rentDay = Convert.ToDateTime(bike.RentFromDate);
                     double daysRented = (todaysDate - rentDay).TotalDays;
 
                     if (daysRented == 0)
                     {
                         // Nuomos kaina, jei dviratis isnuomotas siandien
-                        rentPriceForBike += item.RentPrice;
+                        rentPriceForBike += bike.RentPrice;
                     }
                     else
                     {
                         // Nuomos kaina, jei dviratis isnuomotas seniau nei siandien
-                        rentPriceForBike += item.RentPrice * daysRented;
+                        rentPriceForBike += bike.RentPrice * daysRented;
                     }
 
-                    Console.WriteLine($"{item.BikeID} | {item.Brand} | {item.Model}");
+                    Console.WriteLine($"{bike.BikeID} | {bike.Brand} | {bike.Model}");
                 }
 
                 totalRentPrice = (rentPriceForCar + rentPriceForMoto + rentPriceForBike);

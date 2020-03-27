@@ -1,4 +1,4 @@
-﻿using Project.Repository;
+﻿using Project.SQLQueries;
 using Project.VehicleData;
 using System;
 using System.Collections.Generic;
@@ -201,7 +201,7 @@ namespace Project.Functions
 
             var result = motos.Select(m => m).Where(m => m.VehNumber == vehNumber);
             
-            foreach (var bike in motos)
+            foreach (var bike in result)
             {
                 DateTime rentDay = Convert.ToDateTime(bike.RentFromDate);
                 double days = (todayDate - rentDay).TotalDays;
