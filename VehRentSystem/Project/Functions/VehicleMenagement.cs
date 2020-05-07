@@ -9,7 +9,6 @@ namespace Project.Functions
         
         public VehicleMenagement()
         {
-
         }
 
         // Transporto priemones isnuomojimas

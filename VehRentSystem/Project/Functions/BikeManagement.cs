@@ -94,30 +94,30 @@ namespace Project.Functions
             List<Bicycle> bikes = SqlQueries.SelectBikes();
 
             Console.Clear();
-            Console.WriteLine($"ID");
+            Console.WriteLine("ID");
             Console.SetCursorPosition(10, 0);
-            Console.WriteLine($"Pavadinimas");
+            Console.WriteLine("Pavadinimas");
             Console.SetCursorPosition(30, 0);
-            Console.WriteLine($"Modelis");
+            Console.WriteLine("Modelis");
             Console.SetCursorPosition(50, 0);
-            Console.WriteLine($"Spalva");
+            Console.WriteLine("Spalva");
             Console.SetCursorPosition(70, 0);
-            Console.WriteLine($"Nuomos kaina");
+            Console.WriteLine("Nuomos kaina");
             
             var result = bikes.Select(s => s).OrderBy(b => b.Brand).ThenBy(b => b.Model);
 
             foreach (var bike in result)
             {
                 Console.SetCursorPosition(0, y);
-                Console.WriteLine($"{bike.BikeID}");
+                Console.WriteLine(bike.BikeID);
                 Console.SetCursorPosition(10, y);
-                Console.WriteLine($"{bike.Brand}");
+                Console.WriteLine(bike.Brand);
                 Console.SetCursorPosition(30, y);
-                Console.WriteLine($"{bike.Model}");
+                Console.WriteLine(bike.Model);
                 Console.SetCursorPosition(50, y);
-                Console.WriteLine($"{bike.Color}");
+                Console.WriteLine(bike.Color);
                 Console.SetCursorPosition(70, y);
-                Console.WriteLine($"{bike.RentPrice}");
+                Console.WriteLine(bike.RentPrice);
                 Console.SetCursorPosition(90, y);
                 y++;
             }
@@ -134,30 +134,30 @@ namespace Project.Functions
             List<Bicycle> bikes = SqlQueries.SelectBikes();
 
             Console.Clear();
-            Console.WriteLine($"ID");
+            Console.WriteLine("ID");
             Console.SetCursorPosition(10, 0);
-            Console.WriteLine($"Pavadinimas");
+            Console.WriteLine("Pavadinimas");
             Console.SetCursorPosition(30, 0);
-            Console.WriteLine($"Modelis");
+            Console.WriteLine("Modelis");
             Console.SetCursorPosition(50, 0);
-            Console.WriteLine($"Spalva");
+            Console.WriteLine("Spalva");
             Console.SetCursorPosition(70, 0);
-            Console.WriteLine($"Nuomos kaina");
+            Console.WriteLine("Nuomos kaina");
 
             var result = bikes.Select(b => b).Where(b => b.RentStatus == false).OrderBy(b => b.Brand).ThenBy(b => b.Model);
 
             foreach (var bike in result)
             {
                 Console.SetCursorPosition(0, y);
-                Console.WriteLine($"{bike.BikeID}");
+                Console.WriteLine(bike.BikeID);
                 Console.SetCursorPosition(10, y);
-                Console.WriteLine($"{bike.Brand}");
+                Console.WriteLine(bike.Brand);
                 Console.SetCursorPosition(30, y);
-                Console.WriteLine($"{bike.Model}");
+                Console.WriteLine(bike.Model);
                 Console.SetCursorPosition(50, y);
-                Console.WriteLine($"{bike.Color}");
+                Console.WriteLine(bike.Color);
                 Console.SetCursorPosition(70, y);
-                Console.WriteLine($"{bike.RentPrice}");
+                Console.WriteLine(bike.RentPrice);
                 Console.SetCursorPosition(90, y);
                 y++;
             }
@@ -173,30 +173,30 @@ namespace Project.Functions
             List<Bicycle> bikes = SqlQueries.SelectBikes();
 
             Console.Clear();
-            Console.WriteLine($"ID");
+            Console.WriteLine("ID");
             Console.SetCursorPosition(10, 0);
-            Console.WriteLine($"Pavadinimas");
+            Console.WriteLine("Pavadinimas");
             Console.SetCursorPosition(30, 0);
-            Console.WriteLine($"Modelis");
+            Console.WriteLine("Modelis");
             Console.SetCursorPosition(50, 0);
-            Console.WriteLine($"Spalva");
+            Console.WriteLine("Spalva");
             Console.SetCursorPosition(70, 0);
-            Console.WriteLine($"Nuomos kaina");
+            Console.WriteLine("Nuomos kaina");
 
             var result = bikes.Select(b => b).Where(b => b.RentStatus == true).OrderBy(b => b.Brand).ThenBy(b => b.Model);
 
             foreach (var bike in result)
             {
                 Console.SetCursorPosition(0, y);
-                Console.WriteLine($"{bike.BikeID}");
+                Console.WriteLine(bike.BikeID);
                 Console.SetCursorPosition(10, y);
-                Console.WriteLine($"{bike.Brand}");
+                Console.WriteLine(bike.Brand);
                 Console.SetCursorPosition(30, y);
-                Console.WriteLine($"{bike.Model}");
+                Console.WriteLine(bike.Model);
                 Console.SetCursorPosition(50, y);
-                Console.WriteLine($"{bike.Color}");
+                Console.WriteLine(bike.Color);
                 Console.SetCursorPosition(70, y);
-                Console.WriteLine($"{bike.RentPrice}");
+                Console.WriteLine(bike.RentPrice);
                 Console.SetCursorPosition(90, y);
                 y++;
             }

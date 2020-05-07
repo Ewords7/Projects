@@ -285,15 +285,15 @@ namespace Project.Functions
         public void ValidDocsData()
         {
             Console.Clear();
-            Console.WriteLine($"Numeris");
+            Console.WriteLine("Numeris");
             Console.SetCursorPosition(10, 0);
-            Console.WriteLine($"Marke");
+            Console.WriteLine("Marke");
             Console.SetCursorPosition(30, 0);
-            Console.WriteLine($"Modelis");
+            Console.WriteLine("Modelis");
             Console.SetCursorPosition(50, 0);
-            Console.WriteLine($"TA");
+            Console.WriteLine("TA");
             Console.SetCursorPosition(70, 0);
-            Console.WriteLine($"Draudimas\n");
+            Console.WriteLine("Draudimas\n");
             List<Motorcycle> motos = SqlQueries.SelectMotorcycles();
             var result = motos.Select(m => m).OrderBy(m => m.Brand).ThenBy(m => m.Model);
             foreach (var moto in result)
@@ -308,16 +308,16 @@ namespace Project.Functions
                 if (isTSValid < 0 && isInsuranceValid < 0)
                 {
                     Console.SetCursorPosition(0, y);
-                    Console.WriteLine($"{moto.VehNumber}");
+                    Console.WriteLine(moto.VehNumber);
                     Console.SetCursorPosition(10, y);
-                    Console.WriteLine($"{moto.Brand}");
+                    Console.WriteLine(moto.Brand);
                     Console.SetCursorPosition(30, y);
-                    Console.WriteLine($"{moto.Model}");
+                    Console.WriteLine(moto.Model);
                     Console.SetCursorPosition(50, y);
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"{moto.TechServiceExp}");
+                    Console.WriteLine(moto.TechServiceExp);
                     Console.SetCursorPosition(70, y);
-                    Console.WriteLine($"{moto.InsuranceExp}");
+                    Console.WriteLine(moto.InsuranceExp);
                     Console.ResetColor();
                     Console.SetCursorPosition(90, y);
                     y++;
@@ -325,33 +325,33 @@ namespace Project.Functions
                 else if (isTSValid < 0)
                 {
                     Console.SetCursorPosition(0, y);
-                    Console.WriteLine($"{moto.VehNumber}");
+                    Console.WriteLine(moto.VehNumber);
                     Console.SetCursorPosition(10, y);
-                    Console.WriteLine($"{moto.Brand}");
+                    Console.WriteLine(moto.Brand);
                     Console.SetCursorPosition(30, y);
-                    Console.WriteLine($"{moto.Model}");
+                    Console.WriteLine(moto.Model);
                     Console.SetCursorPosition(50, y);
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"{moto.TechServiceExp}");
+                    Console.WriteLine(moto.TechServiceExp);
                     Console.ResetColor();
                     Console.SetCursorPosition(70, y);
-                    Console.WriteLine($"{moto.InsuranceExp}");
+                    Console.WriteLine(moto.InsuranceExp);
                     Console.SetCursorPosition(90, y);
                     y++;
                 }
                 else if (isInsuranceValid < 0)
                 {
                     Console.SetCursorPosition(0, y);
-                    Console.WriteLine($"{moto.VehNumber}");
+                    Console.WriteLine(moto.VehNumber);
                     Console.SetCursorPosition(10, y);
-                    Console.WriteLine($"{moto.Brand}");
+                    Console.WriteLine(moto.Brand);
                     Console.SetCursorPosition(30, y);
-                    Console.WriteLine($"{moto.Model}");
+                    Console.WriteLine(moto.Model);
                     Console.SetCursorPosition(50, y);
-                    Console.WriteLine($"{moto.TechServiceExp}");
+                    Console.WriteLine(moto.TechServiceExp);
                     Console.SetCursorPosition(70, y);
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"{moto.InsuranceExp}");
+                    Console.WriteLine(moto.InsuranceExp);
                     Console.ResetColor();
                     Console.SetCursorPosition(90, y);
                     y++;
@@ -360,16 +360,16 @@ namespace Project.Functions
                 else if (isTSValid >= 0 && isTSValid < 32 && isInsuranceValid >= 0 && isInsuranceValid < 32)
                 {
                     Console.SetCursorPosition(0, y);
-                    Console.WriteLine($"{moto.VehNumber}");
+                    Console.WriteLine(moto.VehNumber);
                     Console.SetCursorPosition(10, y);
-                    Console.WriteLine($"{moto.Brand}");
+                    Console.WriteLine(moto.Brand);
                     Console.SetCursorPosition(30, y);
-                    Console.WriteLine($"{moto.Model}");
+                    Console.WriteLine(moto.Model);
                     Console.SetCursorPosition(50, y);
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine($"{moto.TechServiceExp}");
+                    Console.WriteLine(moto.TechServiceExp);
                     Console.SetCursorPosition(70, y);
-                    Console.WriteLine($"{moto.InsuranceExp}");
+                    Console.WriteLine(moto.InsuranceExp);
                     Console.SetCursorPosition(90, y);
                     Console.ResetColor();
                     y++;
@@ -377,33 +377,33 @@ namespace Project.Functions
                 else if (isTSValid >= 0 && isTSValid < 32)
                 {
                     Console.SetCursorPosition(0, y);
-                    Console.WriteLine($"{moto.VehNumber}");
+                    Console.WriteLine(moto.VehNumber);
                     Console.SetCursorPosition(10, y);
-                    Console.WriteLine($"{moto.Brand}");
+                    Console.WriteLine(moto.Brand);
                     Console.SetCursorPosition(30, y);
-                    Console.WriteLine($"{moto.Model}");
+                    Console.WriteLine(moto.Model);
                     Console.SetCursorPosition(50, y);
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine($"{moto.TechServiceExp}");
+                    Console.WriteLine(moto.TechServiceExp);
                     Console.ResetColor();
                     Console.SetCursorPosition(70, y);
-                    Console.WriteLine($"{moto.InsuranceExp}");
+                    Console.WriteLine(moto.InsuranceExp);
                     Console.SetCursorPosition(90, y);
                     y++;
                 }
                 else if (isInsuranceValid >= 0 && isInsuranceValid < 32)
                 {
                     Console.SetCursorPosition(0, y);
-                    Console.WriteLine($"{moto.VehNumber}");
+                    Console.WriteLine(moto.VehNumber);
                     Console.SetCursorPosition(10, y);
-                    Console.WriteLine($"{moto.Brand}");
+                    Console.WriteLine(moto.Brand);
                     Console.SetCursorPosition(30, y);
-                    Console.WriteLine($"{moto.Model}");
+                    Console.WriteLine(moto.Model);
                     Console.SetCursorPosition(50, y);
-                    Console.WriteLine($"{moto.TechServiceExp}");
+                    Console.WriteLine(moto.TechServiceExp);
                     Console.SetCursorPosition(70, y);
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine($"{moto.InsuranceExp}");
+                    Console.WriteLine(moto.InsuranceExp);
                     Console.ResetColor();
                     Console.SetCursorPosition(90, y);
                     y++;

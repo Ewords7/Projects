@@ -121,17 +121,17 @@ namespace Project.Functions
             List<Client> clients = SqlQueries.SelectClients();
             
             Console.Clear();            
-            Console.WriteLine($"AK");
+            Console.WriteLine("AK");
             Console.SetCursorPosition(15, 0);
-            Console.WriteLine($"Vardas");
+            Console.WriteLine("Vardas");
             Console.SetCursorPosition(30, 0);
-            Console.WriteLine($"Pavarde");
+            Console.WriteLine("Pavarde");
             Console.SetCursorPosition(50, 0);
-            Console.WriteLine($"Gimimo data");
+            Console.WriteLine("Gimimo data");
             Console.SetCursorPosition(70, 0);
-            Console.WriteLine($"Adresas");
+            Console.WriteLine("Adresas");
             Console.SetCursorPosition(90, 0);
-            Console.WriteLine($"Miestas");
+            Console.WriteLine("Miestas");
             Console.SetCursorPosition(110, 0);
 
             var result = clients.Select(cl => cl).OrderBy(cl => cl.Name).ThenBy(cl => cl.Surename);
@@ -279,11 +279,11 @@ namespace Project.Functions
                 Console.CursorVisible = false;
                 Console.Clear();
                 
-                Console.WriteLine($"AK");
+                Console.WriteLine("AK");
                 Console.SetCursorPosition(15, 0);
-                Console.WriteLine($"Vardas");
+                Console.WriteLine("Vardas");
                 Console.SetCursorPosition(30, 0);
-                Console.WriteLine($"Pavarde");
+                Console.WriteLine("Pavarde");
                 Console.SetCursorPosition(30, 0);
 
                 var result = clients.Select(cl => cl).Where(cl => cl.Surename == surename);
